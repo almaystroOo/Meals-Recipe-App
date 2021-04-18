@@ -27,8 +27,9 @@ class MyApp extends StatelessWidget {
                       GoogleFonts.robotoCondensed(fontSize: 24).fontFamily,
                 ))),
         home: Categories(),
+        initialRoute: '/',
         routes: {
-          '/recipeScreen': (BuildContext context) => CategoryMeal(),
+          CategoryMeal.routeName: (BuildContext context) => CategoryMeal(),
         });
   }
 }

@@ -13,7 +13,7 @@ class CategoryItem extends StatelessWidget {
       : super(key: key);
 
   void navigator(BuildContext ctx) {
-    Navigator.pushNamed(ctx, '/recipeScreen',
+    Navigator.pushNamed(ctx, CategoryMeal.routeName,
         arguments: {'id': id, 'title': title});
     // Navigator.of(ctx).push(MaterialPageRoute(
     //   builder: (_) => CategoryMeal(
