@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/3.2%20dummy_data.dart';
-import 'package:meals_app/ui/view/category_item.dart';
-import '../../models/category.dart';
+import 'package:meals_app/ui/view/widgets/category_item.dart';
+import '../../../models/category.dart';
 
 class Categories extends StatefulWidget {
   Categories({Key key}) : super(key: key);
