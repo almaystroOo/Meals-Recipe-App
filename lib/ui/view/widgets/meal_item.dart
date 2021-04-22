@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/models/meals.dart';
 import 'package:meals_app/models/category.dart';
-import 'package:meals_app/ui/view/screens/categories_screen.dart';
+import 'package:meals_app/ui/view/screens/meal_detail_screen.dart';
 
 class MealItem extends StatelessWidget {
   final List<Meal> meal;
@@ -47,10 +47,15 @@ class MealItem extends StatelessWidget {
     }
   }
 
+  void navigateToDetail(BuildContext ctx) {
+    Navigator.of(ctx).pushNamed(MealDeatilScreen.route,
+        arguments: {'index': index, 'meals': meal});
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: () {},
+        onTap: () => navigateToDetail(context),
         child: Card(
           color: color,
           shape:
