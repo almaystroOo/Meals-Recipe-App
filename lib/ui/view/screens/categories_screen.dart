@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/3.2%20dummy_data.dart';
+import 'package:meals_app/ui/view/screens/main_drawer.dart';
 import 'package:meals_app/ui/view/widgets/category_item.dart';
 import '../screens/Favourite_Meal_Screen.dart';
 import 'category_screen.dart';
@@ -37,7 +38,11 @@ class _CategoriesState extends State<Categories> {
     return Scaffold(
         appBar: AppBar(
           title: Text(_pages[_selectedIndex]['title']),
+          // actions: [
+
+          // ],
         ),
+        drawer: MainDrawer(),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
           backgroundColor: Theme.of(context).accentColor,

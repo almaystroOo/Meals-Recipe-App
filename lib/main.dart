@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meals_app/ui/view/screens/categories_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meals_app/ui/view/screens/filters_screen.dart';
 import 'ui/view/screens/category_meals_screen.dart';
 import 'package:meals_app/ui/view/screens/meal_detail_screen.dart';
 
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
               bodyText1: TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
               bodyText2: TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
               headline6: TextStyle(
+                fontWeight: FontWeight.bold,
                 fontFamily:
                     GoogleFonts.robotoCondensed(fontSize: 24).fontFamily,
               ))),
@@ -33,7 +35,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         CategoryMeal.routeName: (BuildContext context) => CategoryMeal(),
-        MealDeatilScreen.route: (context) => MealDeatilScreen()
+        MealDeatilScreen.route: (context) => MealDeatilScreen(),
+        FiltersScreen.routeName: (context) => FiltersScreen()
       },
       // onGenerateRoute: (settings) {
       //   return settings;
